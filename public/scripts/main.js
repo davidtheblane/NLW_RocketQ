@@ -4,6 +4,7 @@ import Modal from "./modal.js";
 // adicionando ela a uma constante
 const modal = Modal();
 
+// Quando o botao marcar como lida for clicado ele abre a modal
 //pegar todos os botoes que existem com a class check
 const checkButtons = document.querySelectorAll(".actions a.check");
 
@@ -15,6 +16,11 @@ checkButtons.forEach((button) => {
   });
 });
 
-//pegar quando o marcar como lido for clicado.
+// Quando o botao delete for clicado ele abre a modal
+const deleteButton = document.querySelectorAll(".actions a.delete");
 
-modal.open();
+deleteButton.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    modal.open();
+  });
+});
