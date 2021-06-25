@@ -16,6 +16,9 @@ server.use(express.static("public"));
 //responsavel por mostrar o caminho da pasta views
 server.set("views", path.join(__dirname, "views"));
 
+// middleware
+server.use(express.urlencoded({ extended: true }));
+
 // declarando que o server deve usar o route
 server.use(route);
 
