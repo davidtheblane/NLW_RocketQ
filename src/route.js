@@ -9,5 +9,8 @@ route.get("/", (req, res) => res.render("index"));
 route.get("/room", (req, res) => res.render("room"));
 route.get("/create-pass", (req, res) => res.render("create-pass"));
 
+// formato que o formulario de dentro da modal tem que passar a informação
+// route.post("/room/:room/:question/:action");
+
 // exportando a constante route para que o server.js possa enxergá-la
 module.exports = route;
