@@ -4,13 +4,12 @@ module.exports = {
   async create(req, res) {
     const db = await Database();
     const pass = req.body.password;
-
     let roomId;
     let isRoom = true;
 
     while (isRoom) {
       // GERA O NUMERO DA SALA
-      for (let i = 0; i < 6; i++) {
+      for (var i = 0; i < 6; i++) {
         i == 0
           ? (roomId = Math.floor(Math.random() * 10).toString())
           : (roomId += Math.floor(Math.random() * 10).toString());
@@ -22,7 +21,7 @@ module.exports = {
       isRoom = roomsExistIds.some((roomExistId) => roomExistId === roomId);
 
       // Se não existir
-      if (!roomsExistIds) {
+      if (!isRoom) {
         // INSERE A SALA NO BANCO
         await db.run(`INSERT INTO rooms (
           id,
@@ -34,7 +33,7 @@ module.exports = {
       }
     }
 
-    db.close();
+    await db.close();
 
     res.redirect(`/room/${roomId}`);
   },
@@ -54,5 +53,11 @@ module.exports = {
       questions: questions,
       questionsRead: questionsRead,
     });
+  },
+
+  enter(req, res) {
+    const roomId = req.body.roomId;
+
+    res.redirect(`/room/${roomId}`);
   },
 };

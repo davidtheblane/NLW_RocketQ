@@ -1,10 +1,10 @@
 <section>
   <h2>Entre como participante</h2>
-  <form action="">
+  <form action="/enterroom" method="POST">
     <label class="sr-only" for="room-id">Código da sala</label>
-    <input id="room-id" type="number" placeholder="Código da Sala">
+    <input name="roomId" type="number" id="room-id" placeholder="Código da Sala">
     <button>
-      <img src="./images/enter-room.svg" alt="Entrar na sala">
+      <img src="/images/enter-room.svg" alt="Entrar na sala">
       Entrar na Sala</button>
   </form>
 </section>
@@ -17,6 +17,6 @@
 <section>
   <h2>Crie sua própria sala, de forma fácil</h2>
   <a href="/create-pass" class="button outlined">
-    <img src="./images/users.svg" alt="Criar Sala">Criar Sala
+    <img src="/images/users.svg" alt="Criar Sala">Criar Sala
   </a>
 </section>
