@@ -15,8 +15,8 @@ route.get("/create-pass", (req, res) =>
 route.get("/room/:room", (req, res) => res.render("room"));
 
 // formato que o formulario de dentro da modal tem que passar a informação
-route.post("/room/:room/:question/:action", QuestionController.index);
-route.post("/room/create-room", RoomController.create);
+route.post("/question/:room/:question/:action", QuestionController.index);
+route.post("/create-room", RoomController.create);
 
 // exportando a constante route para que o server.js possa enxergá-la
 module.exports = route;
