@@ -12,7 +12,7 @@ route.get("/create-pass", (req, res) =>
   res.render("index", { page: "create-pass" })
 );
 
-route.get("/room/:room", (req, res) => res.render("room"));
+route.get("/room/:room", RoomController.open);
 
 // formato que o formulario de dentro da modal tem que passar a informação
 route.post("/question/:room/:question/:action", QuestionController.index);
