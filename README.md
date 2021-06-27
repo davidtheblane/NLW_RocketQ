@@ -47,6 +47,6 @@ O RocketQ tem a função de fornecer uma ferramenta de feedback para diversos ce
 
 npm install e npm init-db(para criar o banco de dados)
 
-### Rodando
+### Rodando:
 
 npm start -> inicia o servidor e permite acessar o projeto pelo localhost:3000
