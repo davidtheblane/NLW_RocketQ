@@ -1,6 +1,5 @@
 # :rocket: O projeto RocketQ :man_astronaut:
 
-Trilha Discovery da NLW Together, Jun de 2021 - Aplicação RocketQ.
 Esse projeto foi desenvolvido na Trilha Discovery da NLW Together, Jun de 2021, evento criado pela Rocketseat, a instrutora Jakeliny Gracielly nos guiou sobre todos os aspectos das tecnologias abaixo:
 
 - HTML
